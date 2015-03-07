@@ -20,6 +20,14 @@ module.exports = function (grunt) {
       app: 'app',
       dist: 'dist'
     },
+    devUpdate: {
+      check: {
+        options: {
+          reportUpdated: false,
+          updateType: 'report'
+        }
+      }
+    },
     watch: {
       sass: {
         files: ['<%= yeoman.app %>/_scss/**/*.{scss,sass}'],
@@ -93,7 +101,8 @@ module.exports = function (grunt) {
             // Running Jekyll also cleans the target directory.  Exclude any
             // non-standard `keep_files` here (e.g., the generated files
             // directory from Jekyll Picture Tag).
-            '!<%= yeoman.dist %>/.git*'
+            '!<%= yeoman.dist %>/.git*',
+             '!<%= yeoman.dist %>/perf'
           ]
         }]
       },
@@ -169,15 +178,19 @@ module.exports = function (grunt) {
     htmlmin: {
       dist: {
         options: {
+          removeComments: true,
           collapseWhitespace: true,
           collapseBooleanAttributes: true,
           removeAttributeQuotes: true,
-          removeRedundantAttributes: true
+          removeRedundantAttributes: true,
+          keepClosingSlash: true,
+          minifyCSS: true,
+          minifyJS: true 
         },
         files: [{
           expand: true,
           cwd: '<%= yeoman.dist %>',
-          src: '**/*.html',
+          src: ['**/*.html', '!perf/**/*.html'],
           dest: '<%= yeoman.dist %>'
         }]
       }
@@ -286,6 +299,37 @@ module.exports = function (grunt) {
         ]
       }
     },
+    pagespeed: {
+      options: {
+        locale: 'en_GB',
+        nokey: true,
+        url: 'http://legonigel.github.io'
+      },
+      desktop: {
+        options: {
+          strategy: 'desktop'
+        }
+      },
+      mobile: {
+        options: {
+          strategy: 'mobile'
+        }
+      }
+    },
+    phantomas: {
+      site: {
+        options: {
+          indexPath: '<%= yeoman.dist %>/perf/phantomas/',
+          options   : {
+            'film-strip': false,
+            'no-externals': true,
+            'timeout': 60
+          },
+          url: 'http://legonigel.github.io',
+          buildUi: true
+        }
+      }
+    },
     // https://github.com/robwierzbowski/generator-jekyllrb/issues/106
     // scsslint: {
     //   // See https://www.npmjs.org/package/grunt-scss-lint for options.
@@ -339,6 +383,11 @@ module.exports = function (grunt) {
     'csslint:check'
     // 'scsslint'
   ]);
+  
+  grunt.registerTask('perf', [
+    'pagespeed',
+    'phantomas'
+  ]);
 
   grunt.registerTask('build', [
     'clean',
@@ -359,6 +408,7 @@ module.exports = function (grunt) {
   grunt.registerTask('deploy', [
     'check',
     'test',
+    'perf',
     'build',
     'buildcontrol'
     ]);
