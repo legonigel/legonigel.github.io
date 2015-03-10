@@ -1,3 +1,6 @@
-source "http://rubygems.org"
+source "https://rubygems.org"
 
-gem 'jekyll', '~> 2.3.0'gem 'kramdown'gem 'sass', '~> 3.4.3'
+gem "jekyll", "~> 2.5.3"
+gem "kramdown"
+gem "sass", "~> 3.4.13"
+gem "scss-lint", "~> 0.34.0"

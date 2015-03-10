@@ -1,0 +1,106 @@
+// ==========================================================================
+// Suggested Tweet
+// ==========================================================================
+
+.entry-meta--suggested__tweet {
+  margin-bottom: emRhythm(8);
+}
+
+.suggested-tweet--bubble {
+  display: inline-block;
+  position: relative;
+  padding: 1em 1em 1.125em;
+  margin-bottom: emRhythm($base-line-multi);
+  border-radius: 1em;
+  background-color: $white-dark;
+
+  &:hover {
+    background-color: $white-darker;
+
+    &:after {
+      border-color: $white-darker transparent;
+    }
+
+    .suggested-tweet--bubble__text {
+      color: $color-text--color__dark;
+    }
+  }
+
+  &:focus {
+    color: $white;
+    background-color: $color-link--color__focus;
+
+    &:after {
+      border-color: $color-link--color__focus transparent;
+    }
+
+    .suggested-tweet--bubble__text {
+      color: $white;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -18px;
+    left: 62px;
+    z-index: 2;
+    border-width: 20px 20px 0;
+    border-style: solid;
+    border-color: $white-dark transparent;
+  }
+}
+
+.suggested-tweet--bubble__text {
+  color: $color-text--color;
+  transition: color 0.2s;
+  backface-visibility: hidden;
+}
+
+.suggested-tweet--text {
+  margin-left: 1em;
+}
+
+.suggested-tweet--link {
+
+  &:hover {
+
+    .suggested-tweet--icon {
+
+      .icon-foreground {
+        fill: $color-link--color__hover;
+      }
+    }
+  }
+
+  &:focus {
+
+    .suggested-tweet--icon {
+
+      .icon-foreground {
+        fill: $color-link--color__focus;
+      }
+    }
+  }
+}
+
+.suggested-tweet--icon {
+  position: relative;
+  top: 4px;
+  display: inline-block;
+  margin-right: 4px;
+  width: 20px;
+  height: 20px;
+  line-height: 0;
+
+  .icon {
+    width: inherit;
+    height: inherit;
+  }
+
+  .icon-foreground {
+    fill: $color-link--color;
+    transition: fill 0.2s;
+    backface-visibility: hidden;
+  }
+}

@@ -1,0 +1,100 @@
+// ==========================================================================
+// Navigation
+// ==========================================================================
+
+// Common navigation
+// ==========================================================================
+nav {
+  text-transform: uppercase;
+
+  a {
+    color: $color-nav--color;
+
+    &:hover {
+      color: $color-nav--color__hover;
+    }
+
+    &:focus {
+      color: $color-nav--color__focus;
+    }
+  }
+}
+
+// Main navigation
+// ==========================================================================
+.main-navigation {
+
+  li {
+    margin-left: 6%;
+
+    @include breakpoint(smaller-than-small-desktop) {
+      margin-left: 9%;
+    }
+
+    @include breakpoint(mobile-portrait-to-mobile-landscape) {
+      margin-left: 12%;
+    }
+  }
+
+  a {
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+    backface-visibility: hidden;
+
+    &:hover,
+    &:focus {
+      border-bottom-color: $color-nav--color__focus;
+    }
+  }
+}
+
+@each $page in home, about {
+  .page-#{$page} .nav-#{$page} {
+    color: $color-nav--color__hover;
+    cursor: text;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
+
+    &:focus {
+      color: $color-nav--color__focus;
+    }
+  }
+}
+
+// Post and Page navigation
+// ==========================================================================
+.post-navigation,
+.paging-navigation {
+  padding-top: 9%;
+}
+
+.post-navigation {
+  border-top: 2px solid $color-hr--color;
+}
+
+.nav-previous {
+  float: left;
+}
+
+.nav-previous--link {
+
+  &:before {
+    content: '\2190';
+    margin-right: 0.25em;
+  }
+}
+
+.nav-next {
+  float: right;
+}
+
+.nav-next--link {
+
+  &:after {
+    content: '\2192';
+    margin-left: 0.25em;
+  }
+}

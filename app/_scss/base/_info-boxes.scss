@@ -1,0 +1,50 @@
+// ==========================================================================
+// Info boxes
+// ==========================================================================
+
+%info-box {
+  padding: 1em;
+  margin-bottom: emRhythm($base-line-multi);
+
+  a {
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// yellow
+%yellow-box,
+.yellow-box {
+  @extend %info-box;
+  color: $color-infoBox--yellow__color;
+  background-color: $color-infoBox--yellow__backgroundColor;
+  border-left: 0.33em solid $color-infoBox--yellow__border;
+
+  a {
+
+    &:hover,
+    &:focus {
+      color: $color-infoBox--yellow__color-hover;
+    }
+  }
+}
+
+// gray
+%gray-box,
+.gray-box {
+  @extend %info-box;
+  color: $color-infoBox--gray__color;
+  background-color: $color-infoBox--gray__backgroundColor;
+  border-left: 0.33em solid $color-infoBox--gray__border;
+
+  a {
+
+    &:hover,
+    &:focus {
+      color: $color-infoBox--gray__color-hover;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+// ==========================================================================
+// Links
+// ==========================================================================
+
+a {
+  @extend %font-open-sans-semibold;
+  color: $color-link--color;
+  text-decoration: none;
+  transition: color 0.2s;
+  backface-visibility: hidden;
+
+  &:hover {
+    color: $color-link--color__hover;
+  }
+
+  &:focus {
+    color: $color-link--color__focus;
+    outline: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $color-headings--color__hover;
+    }
+
+    &:focus {
+      color: $color-headings--color__focus;
+    }
+  }
+}

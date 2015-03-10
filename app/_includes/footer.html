@@ -1,0 +1,41 @@
+</div>
+
+        <aside class="secondary vcard author clearfix" role="complementary">
+          <img alt="A photo of Nigel" class="secondary-photo media-circle photo" src="/img/Nigel_Armstrong_Square.jpg">
+          <p>Something about me. Learn more <a href="/about/" class="url">about me</a>.</p>
+          <a class="secondary-twitter--link" href="http://twitter.com/Legonigel"><span class="secondary-twitter--icon">{% include icons/icon-twitter.svg %}</span>Follow me on Twitter</a>
+        </aside>
+      </div>
+
+      <footer id="colophon" class="site-footer clearfix" role="contentinfo">
+        <div class="site-footer--secondary">
+          <ul class="site-footer--icons list-inline">
+            <li class="site-footer--icons__item">
+              <a class="site-footer--icons__anchor site-footer--icons__icon" href="http://twitter.com/Legonigel">
+                {% include icons/icon-twitter.svg %}
+                <span class="site-footer--icons--title">Twitter</span>
+              </a>
+            </li>
+            <li class="site-footer--icons__item">
+              <a class="site-footer--icons__anchor site-footer--icons__icon" href="http://github.com/legonigel">
+                {% include icons/icon-github.svg %}
+                <span class="site-footer--icons--title">GitHub</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="site-footer--primary clearfix">
+          <p class="site-footer--copyright">&copy; {{ site.time | date: "%Y" }} Nigel Armstrong. All rights reserved.</p>
+          <a class="site-footer--feed" href="/atom.xml" title="Subscribe to my RSS feed">
+            {% include icons/icon-rss.svg %}
+            <span class="visuallyhidden">RSS Feed</span>
+          </a>
+      </footer>
+    </div>
+
+    <!-- build:js(app) /js/scripts.js -->
+    <script src="/js/scripts.js"></script>
+    <!-- endbuild -->
+
+  </body>
+</html>

@@ -1,0 +1,113 @@
+// ==========================================================================
+// Primary
+// ==========================================================================
+
+.post {
+  margin: 6% 0;
+
+  @include breakpoint(smaller-than-small-desktop) {
+    margin: 9% 0;
+  }
+
+  @include breakpoint(mobile-portrait-to-mobile-landscape) {
+    margin: 12% 0;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.entry-meta--header,
+.entry-meta--footer__bottom {
+  color: $color-meta--color;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $color-meta--color__hover;
+    }
+
+    &:focus {
+      color: $color-meta--color__focus;
+    }
+  }
+}
+
+.entry-meta--header {
+  @extend %font-open-sans-semibold;
+  margin-bottom: emRhythm(2);
+}
+
+.entry-meta--icon {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  margin-right: 2px;
+  width: 15px;
+  height: 15px;
+  line-height: 0;
+  transition: all 0.25s;
+  backface-visibility: hidden;
+
+  .icon {
+    width: inherit;
+    height: inherit;
+  }
+
+  .icon-foreground {
+    fill: $color-meta--color;
+  }
+}
+
+.entry-meta--link {
+  color: $color-meta--color;
+
+  &:hover {
+    color: $color-meta--color__hover;
+
+    .entry-meta--icon {
+
+      .icon-foreground {
+        fill: $color-meta--color__hover;
+      }
+    }
+  }
+
+  &:focus {
+    color: $color-meta--color__focus;
+
+    .entry-meta--icon {
+
+      .icon-foreground {
+        fill: $color-meta--color__focus;
+      }
+    }
+  }
+}
+
+.entry-content {
+  margin-bottom: emRhythm($base-line-multi);
+
+  >p {
+
+    &:first-child {
+      @include setType(6, $ms-up1);
+      margin-bottom: emRhythm(4, $ms-up1);
+
+      @include breakpoint(mobile-portrait-to-mobile-landscape) {
+        @include setType(4);
+      }
+    }
+  }
+}
+
+.continue-reading {
+  @extend %button;
+
+  &:after {
+    content: '\2192';
+    margin-left: 0.5em;
+  }
+}

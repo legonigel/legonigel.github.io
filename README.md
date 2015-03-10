@@ -1,5 +1,5 @@
 # legonigel.github.io
-**Nigel Armstrong is currently a student at Christopher Newport University**
+**Nigel Armstrong is a student at Christopher Newport University**
 
 This website runs on [Jekyll](http://jekyllrb.com/), a blog-aware, static site generator, with a lot of help from [Grunt](http://gruntjs.com/).
 
@@ -11,7 +11,16 @@ This website runs on [Jekyll](http://jekyllrb.com/), a blog-aware, static site g
 - [Ruby](http://www.ruby-lang.org/): Required for Jekyll.
 
 ### Recommended Setup
-- It is a pain on windows, I recommend against it. Maybe I will eventually post on here about how to do it.
+- Ensure that [Command Line Tools for Xcode](https://developer.apple.com/xcode/) is installed and up-to-date
+    - To install: `xcode-select --install`
+- Manage your Ruby enviroments with [RVM](https://rvm.io/) or [rbenv](https://github.com/sstephenson/rbenv)
+    - To update RVM: `rvm get stable`
+- Make sure your installs of [Node.js](http://nodejs.org/) and [NPM](https://npmjs.org/) are up-to-date
+- Install the command line interface for [Grunt](http://gruntjs.com/)
+    - To install: `npm install -g grunt-cli`
+- Install [Bower](http://bower.io/)
+    - To install: `npm install -g bower`
+- For the E2E tests, install [CasperJS](http://casperjs.org/) and [PhantomJS](http://phantomjs.org/)
 
 ## Install Dependencies
 Run the following commands to install the dependencies:
@@ -30,4 +39,4 @@ Run the following commands to install the dependencies:
 
 ## Hat Tip
 The site was scaffolded by [Yeoman](http://yeoman.io/) and [generator-jekyllrb](https://github.com/robwierzbowski/generator-jekyllrb).
-The site was based upon a site by [davidensinger](https://github.com/davidensinger/davidensinger.github.io)
+Much of this sites basis comes from [davidensinger](https://github.com/davidensinger/)

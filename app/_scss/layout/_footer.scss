@@ -1,0 +1,127 @@
+// ==========================================================================
+// Footer
+// ==========================================================================
+
+.site-footer {
+  color: $color-footer--color;
+  text-shadow: 0 1px 1px rgba($color-text--color, 0.25);
+
+  @include breakpoint(smaller-than-small-desktop) {
+    text-align: center;
+  }
+}
+
+// -------------------------------------
+//  Footer Primary
+// -------------------------------------
+
+.site-footer--primary {
+  float: left;
+
+  @include breakpoint(smaller-than-small-desktop) {
+    float: none;
+    display: inline-block;
+  }
+}
+
+.site-footer--copyright {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.site-footer--feed {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 0;
+
+  &:hover,
+  &:focus {
+
+    .icon-rss--background {
+      opacity: 1;
+    }
+
+    .icon-rss--foreground {
+      fill: #ff6600;
+    }
+  }
+
+  .icon-rss {
+    width: inherit;
+    height: inherit;
+  }
+
+  .icon-rss--background {
+    fill: $white;
+    opacity: 0;
+    transition: opacity 0.2s;
+    backface-visibility: hidden;
+  }
+
+  .icon-rss--foreground {
+    fill: $color-footer--color;
+    transition: fill 0.2s;
+    backface-visibility: hidden;
+  }
+}
+
+
+// -------------------------------------
+//  Footer Secondary
+// -------------------------------------
+
+.site-footer--secondary {
+  float: right;
+
+  @include breakpoint(smaller-than-small-desktop) {
+    float: none;
+    margin-bottom: 6%;
+  }
+}
+
+.site-footer--icons {
+  text-align: center;
+}
+
+.site-footer--icons__anchor {
+  display: block;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    color: inherit;
+
+    .icon {
+      transform: scale(1.2);
+    }
+
+    .site-footer--icons--title {
+      opacity: 1;
+    }
+  }
+}
+
+.site-footer--icons__icon {
+
+  .icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s;
+    backface-visibility: hidden;
+  }
+
+  .icon-foreground {
+    fill: $color-footer--color;
+  }
+}
+
+.site-footer--icons--title {
+  @extend %font-open-sans-semibold;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.2s;
+  backface-visibility: hidden;
+}

@@ -1,0 +1,185 @@
+// ==========================================================================
+// Variables
+// ==========================================================================
+
+// Colors
+// ==========================================================================
+
+// Reds
+$red: #e74c3c;
+$red-lightest: lighten($red, 36);
+$red-lighter: lighten($red, 24);
+$red-light: lighten($red, 12);
+$red-dark: darken($red, 12);
+$red-darker: darken($red, 24);
+$red-darkest: darken($red, 36);
+
+// Oranges
+$orange: #e67e22;
+$orange-lightest: lighten($orange, 36);
+$orange-lighter: lighten($orange, 24);
+$orange-light: lighten($orange, 12);
+$orange-dark: darken($orange, 12);
+$orange-darker: darken($orange, 24);
+$orange-darkest: darken($orange, 36);
+
+// Yellows
+$yellow: #f1c40f;
+$yellow-lightest: lighten($yellow, 36);
+$yellow-lighter: lighten($yellow, 24);
+$yellow-light: lighten($yellow, 12);
+$yellow-dark: darken($yellow, 12);
+$yellow-darker: darken($yellow, 24);
+$yellow-darkest: darken($yellow, 36);
+
+// Greens
+$green: #2ecc71;
+$green-lightest: lighten($green, 36);
+$green-lighter: lighten($green, 24);
+$green-light: lighten($green, 12);
+$green-dark: darken($green, 12);
+$green-darker: darken($green, 24);
+$green-darkest: darken($green, 36);
+
+// Blues
+$blue: #3498db;
+$blue-lightest: lighten($blue, 36);
+$blue-lighter: lighten($blue, 24);
+$blue-light: lighten($blue, 12);
+$blue-dark: darken($blue, 12);
+$blue-darker: darken($blue, 24);
+$blue-darkest: darken($blue, 36);
+
+// White, black, and grays
+$white: #fff;
+$white-dark: #f6f6f6;
+$white-darker: #eee;
+$gray: #808080;
+$gray-lightest: lighten($gray, 36);
+$gray-lighter: lighten($gray, 24);
+$gray-light: lighten($gray, 12);
+$gray-dark: darken($gray, 12);
+$gray-darker: darken($gray, 24);
+$gray-darkest: darken($gray, 36);
+$black-lighter: #111;
+$black-light: #090909;
+$black: #000;
+
+
+// Text
+// ==========================================================================
+$color-text--color: mix($blue-dark, $gray-dark, 25%);
+$color-text--color__dark: mix($blue-darker, $gray-darker, 25%);
+
+
+// Selection
+// ==========================================================================
+$color-selection--color: $white-dark;
+$color-selection--background__color: $green-light;
+
+
+// Links
+// ==========================================================================
+$color-link--color: $blue;
+$color-link--color__hover: $blue-dark;
+$color-link--color__focus: $green;
+
+
+// Header
+// ==========================================================================
+$color-inner--container: $white;
+
+
+// Site Logo
+// ==========================================================================
+$color-site--logo__blue: #2f93d5;
+$color-site--logo__green: #35c06a;
+$color-site--logo__orange: #f57a00;
+$color-site--logo__yellow: #f5c500;
+$color-site--logo__red: #ff330f;
+$color-site--logo__focus: $color-link--color__focus;
+
+
+// Navigation
+// ==========================================================================
+$color-nav--color: $gray;
+$color-nav--color__hover: $blue-dark;
+$color-nav--color__focus: $color-link--color__focus;
+
+
+// Headings
+// ==========================================================================
+$color-headings--color: $color-text--color__dark;
+$color-headings--color__hover: $blue-darker;
+$color-headings--color__focus: $color-link--color__focus;
+
+
+// Meta
+// ==========================================================================
+$color-meta--color: $gray-light;
+$color-meta--color__hover: $gray;
+$color-meta--color__focus: $color-link--color__focus;
+
+
+// Button
+// ==========================================================================
+
+// Button color
+$color-button--color: $white-dark;
+$color-button--color__hover: $white;
+
+// Button background
+$color-button--background: $blue;
+$color-button--background__hover: $blue-dark;
+$color-button--background__focus: $green;
+
+// Button box-shadow
+$color-button--boxShadow: $blue-dark;
+$color-button--boxShadow__hover: $blue-darker;
+$color-button--boxShadow__focus: $green-dark;
+
+
+// Info boxes
+// ==========================================================================
+
+// Yellow
+$color-infoBox--yellow__color: $yellow-darker;
+$color-infoBox--yellow__color-hover: $yellow-darkest;
+$color-infoBox--yellow__backgroundColor: $yellow-lighter;
+$color-infoBox--yellow__border: $yellow;
+
+// Gray
+$color-infoBox--gray__color: $gray-dark;
+$color-infoBox--gray__color-hover: $gray-darker;
+$color-infoBox--gray__backgroundColor: $white-dark;
+$color-infoBox--gray__border: $gray-lightest;
+
+
+// Media
+// ==========================================================================
+$color-media--background__color: $gray-lighter;
+$color-media--border__color: $gray-lighter;
+
+
+// Horizontal rule
+// ==========================================================================
+$color-hr--color: $gray-lightest;
+
+
+// Secondary
+// ==========================================================================
+$color-secondary: mix($white, $white-dark);
+
+
+// Footer
+// ==========================================================================
+$color-footer--color: mix($blue-lighter, $white-darker);
+
+
+// Typography (for Typesettings)
+// ==========================================================================
+$base-vertical-unit: 6px;
+$base-line-multi: 4;
+$base-font-size: 18px;
+$ms-ratio: 1.414;
+$load-typesetted: false;

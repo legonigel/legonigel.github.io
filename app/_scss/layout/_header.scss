@@ -1,0 +1,105 @@
+// ==========================================================================
+// Header
+// ==========================================================================
+
+.site-header--outer {
+  padding: 6% 6% 0;
+}
+
+.site-header--inner {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.site-header--primary,
+.site-header--secondary {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+// -------------------------------------
+//  Primary
+// -------------------------------------
+
+.site-header--primary {
+  width: 12%;
+
+  @include breakpoint(smaller-than-small-desktop) {
+    width: 16%;
+  }
+
+  @include breakpoint(all-mobile) {
+    width: 20%;
+  }
+
+  @include breakpoint(mobile-portrait-to-mobile-landscape) {
+    width: 100px;
+  }
+}
+
+.site-logo {
+
+  &:focus {
+
+    .site-logo--svg__path {
+      fill: $color-site--logo__focus;
+    }
+  }
+}
+
+.site-logo--ratio {
+  padding-bottom: 105.36%; // for FlexEmbed
+}
+
+.site-logo--svg {
+  width: 100%;
+  height: 100%;
+
+  .blue {
+    fill: $color-site--logo__blue;
+
+    &:hover {
+      fill: darken($color-site--logo__blue, 5);
+    }
+  }
+
+  .green {
+    fill: $color-site--logo__green;
+
+    &:hover {
+      fill: darken($color-site--logo__green, 5);
+    }
+  }
+
+  .orange {
+    fill: $color-site--logo__orange;
+
+    &:hover {
+      fill: darken($color-site--logo__orange, 5);
+    }
+  }
+
+  .yellow {
+    fill: $color-site--logo__yellow;
+
+    &:hover {
+      fill: darken($color-site--logo__yellow, 5);
+    }
+  }
+
+  .red {
+    fill: $color-site--logo__red;
+
+    &:hover {
+      fill: darken($color-site--logo__red, 5);
+    }
+  }
+}
+
+.site-logo--svg__path {
+  fill-rule: evenodd;
+  transition: fill 0.2s;
+  backface-visibility: hidden;
+}
