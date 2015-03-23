@@ -20,6 +20,7 @@ Thumbs.db
 *.rar
 *.tar
 *.zip
+*.b64
 dist
 node_modules
 .tmp
