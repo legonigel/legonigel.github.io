@@ -8,4 +8,4 @@ sitemap:
   changefreq: 'monthly'
 ---
 
-Hi, my name is __Nigel Armstrong__. Something more about me
+Hi, my name is __Nigel Armstrong__. Something more about me will eventually go here.
