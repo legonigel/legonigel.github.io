@@ -332,7 +332,7 @@ module.exports = function (grunt) {
     buildcontrol: {
       dist: {
         options: {
-          remote: 'git@github.com:davidensinger/davidensinger.github.io.git',
+          remote: 'git@github.com:legonigel/legonigel.github.io.git',
           branch: 'master',
           commit: true,
           push: true
@@ -357,7 +357,7 @@ module.exports = function (grunt) {
       options: {
         locale: 'en_GB',
         nokey: true,
-        url: 'http://davidensinger.com'
+        url: 'http://nigelarmstrong.me'
       },
       desktop: {
         options: {
@@ -379,7 +379,7 @@ module.exports = function (grunt) {
             'no-externals': true,
             'timeout': 60
           },
-          url: 'http://davidensinger.com/',
+          url: 'http://nigelarmstrong.me/',
           buildUi: true
         }
       }
