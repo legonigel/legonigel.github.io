@@ -27,7 +27,7 @@
   width: 12%;
 
   @include breakpoint(smaller-than-small-desktop) {
-    width: 16%;
+    width: 17%;
   }
 
   @include breakpoint(all-mobile) {
@@ -50,7 +50,7 @@
 }
 
 .site-logo--ratio {
-  padding-bottom: 105.36%; // for FlexEmbed
+  padding-bottom: 100%; // for FlexEmbed
 }
 
 .site-logo--svg {
