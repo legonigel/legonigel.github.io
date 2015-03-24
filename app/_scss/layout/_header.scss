@@ -57,43 +57,14 @@
   width: 100%;
   height: 100%;
 
-  .blue {
-    fill: $color-site--logo__blue;
-
-    &:hover {
-      fill: darken($color-site--logo__blue, 5);
-    }
-  }
-
-  .green {
-    fill: $color-site--logo__green;
-
-    &:hover {
-      fill: darken($color-site--logo__green, 5);
-    }
-  }
-
-  .orange {
-    fill: $color-site--logo__orange;
-
-    &:hover {
-      fill: darken($color-site--logo__orange, 5);
-    }
-  }
-
-  .yellow {
-    fill: $color-site--logo__yellow;
-
-    &:hover {
-      fill: darken($color-site--logo__yellow, 5);
-    }
-  }
-
-  .red {
-    fill: $color-site--logo__red;
-
-    &:hover {
-      fill: darken($color-site--logo__red, 5);
+  #logo-gradient {
+    opacity: 0.0;
+    -webkit-transition: opacity .6s ease;
+    -moz-transition: opacity .6s ease;
+    -o-transition: opacity .6s ease;
+    transition: opacity .6s ease;
+    &:hover{
+      opacity:1.0;
     }
   }
 }
