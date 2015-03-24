@@ -22,10 +22,13 @@ html {
 }
 
 .outer-container {
-  max-width: 94%;
+  max-width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
 
   @include breakpoint(extra-large-desktop) {
-    max-width: 1600px;
+    max-width: 1400px;
   }
 
   @include breakpoint(extra-extra-large-desktop) {
@@ -34,6 +37,7 @@ html {
 
   @include breakpoint(all-mobile) {
     max-width: 100%;
+    margin-top: auto;
   }
 }
 
@@ -55,7 +59,7 @@ html {
 // Secondary
 // ==========================================================================
 .secondary {
-  padding: 6% 6% 12% 4%;
+  padding: 6% 6% 4% 4%;
   width: 30%;
 
   @include breakpoint(smaller-than-small-desktop) {
