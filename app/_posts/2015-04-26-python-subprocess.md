@@ -9,9 +9,9 @@ suggested_tweet:
   related: []
 ---
 
-I recently spend some time trying to get Python to play nicely with an interactive subprocesses. By interactive, I mean that the subprocessing is a command line program which waits for input from the user, then acts on that input. I read a lot of documentation and looked for examples as to how to make this work, but couldn't really find anything. After some trial and error, I came to the result I will share with you.
+I recently spent some time trying to get Python to play nicely with an interactive subprocess. By interactive, I mean that the subprocess is a command line program which waits for input from the user, then acts on that input and prints back out to the command line. I read a lot of documentation and looked for examples as to how to make this work, but couldn't really find anything complete. After some trial and error, I came to the result I will share with you.
 
-Note: This is written for python 2.7, for the [Subpproces32](https://pypi.python.org/pypi/subprocess32/) module (a backport of the subprocess module from python 3.2)
+Note: This is written for python 2.7, for the [Subprocess32](https://pypi.python.org/pypi/subprocess32/) module (a backport of the subprocess module from python 3.2)
 
 ## Introduction to Python subprocesses
 
@@ -22,19 +22,19 @@ If the application runs and returns quickly, then  [`subprocess.call`](https://d
 
 ## Popen usage
 
-`Popen` is normally used where the command is ran, then the output is read from it using the [`Popen.communicate`](https://docs.python.org/2/library/subprocess.html#subprocess.Popen.communicate) method. This method allows us to pass data into the standard input of the subprocess and read from the subprocess's standard output and error. The issue with the communicate method is that, similar to the methods discussed above, it waits for the process to terminate. This is no good for an interactive process.
+`Popen` is normally used where the command is run, then the output is read from it using the [`Popen.communicate`](https://docs.python.org/2/library/subprocess.html#subprocess.Popen.communicate) method. This method allows us to pass data into the standard input of the subprocess and read from the subprocess's standard output and standard error. The issue with the communicate method is that, similar to the methods discussed above, it waits for the process to terminate. This is no good for an interactive process.
 
 ## Interactive Popen
 
-Now we can finally arive to what I want, an interactive subprocess. This is one part that the docs don't really discuss well. In order to do this, we need to make the subproces with pipes.
+Now we can finally arrive to what I want, an interactive subprocess. This is one part that the docs don't really discuss well. In order to do this, we need to make the subprocess with pipes.
 
 {% highlight python %}
     ps = subprocess32.Popen(['command', 'argument'], stdout=subprocess32.PIPE, stderr=subprocess32.PIPE, stdin=subprocess32.PIPE)
 {% endhighlight %}
 
-This makes it so that the process is created with pipes and will run until it terminates. Unlike using `communicate` to pass data to the subprocess, pipes will not wait on the process to terminate before returning, however they will wait for data before returning. This means that if you expect the subprocess to output something, but it doesn't then your program will hang. For my applicaiton this was a problem.
+This makes it so that the process is created with pipes and will run until it terminates. Unlike using `communicate` to pass data to the subprocess, pipes will not wait on the process to terminate before returning, however they will wait for data before returning. This means that if you expect the subprocess to output something, but it doesn't then your program will hang. For my application this was a problem.
 
-By setting file status flags on the stdout and stderr of the program, we can use nonblocking reads. This is acomplished with the use of [fcntl](https://docs.python.org/2/library/fcntl.html).
+By setting file status flags on the stdout and stderr of the program, we can use nonblocking reads. This is accomplished with the use of [fcntl](https://docs.python.org/2/library/fcntl.html).
 
 {% highlight python %}
 fcntl.fcntl(ps.stdout.fileno(), fcntl.F_SETFL, os.O_NONBLOCK)
@@ -63,7 +63,9 @@ except Exception:
     pass
 {% endhighlight %}
 
-So an example program with everyting:
+## Example
+
+Finally, an example program with everything:
 
 {% highlight python %}
 # Import necessary modules
