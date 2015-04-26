@@ -7,6 +7,6 @@
 <text fill='white' stroke='#888888' stroke-width=0.5' font-size='32px' font-family="Patrick Hand"><tspan x='50' y='66'>Nigel</tspan><tspan x='20' y='98'>Armstrong</tspan></text>
 </mask>
 </defs>
-<g mask="url(#logo-svg-mask)"><rect x="0" y="0" width="160" height="130" fill="url(#grad1)"/><rect id="logo-gradient" x="0" y="0" width="160" height="130" fill="url(#grad2)" /></g>
+<g mask="url(#logo-svg-mask)"><rect x="0" y="0" width="160" height="130" fill="url(#grad1)"/><rect id="logo-gradient" class="logo-gradient" x="0" y="0" width="160" height="130" fill="url(#grad2)" /></g>
 Sorry, your browser does not support inline SVG. There would normally be a logo here.
 </svg>
