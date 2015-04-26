@@ -11,7 +11,7 @@ html {
   background: $blue; // fallback for IE9
   // http://css-tricks.com/probably-dont-base64-svg/
   // encoded svg with URL encoder
-  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNSIgaGVpZ2h0PSI1MCI+CjxyZWN0IHdpZHRoPSIyOCIgaGVpZ2h0PSI1MCIgZmlsbD0ibm9uZSI+PC9yZWN0Pgo8cGF0aCBkPSJNMTQgMzNMMCAyNUwwIDhMMTQgMEwyOCA4TDI4IDI1TDE0IDMzTDE0IDUwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLW9wYWNpdHk9IjAuMyI+PC9wYXRoPgo8cGF0aCBkPSJNMTQgMEwxNCAxN0wwIDI1TDAgNDJMMTQgNTBMMjggNDJMMjggMjVMMTQgMTciIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZWVlZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2Utb3BhY2l0eT0iMC4zIj48L3BhdGg+Cjwvc3ZnPg=="),
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNSIgaGVpZ2h0PSI1MCI+CjxyZWN0IHdpZHRoPSIyOCIgaGVpZ2h0PSI1MCIgZmlsbD0ibm9uZSI+PC9yZWN0Pgo8cGF0aCBkPSJNMTQgMzNMMCAyNUwwIDhMMTQgMEwyOCA4TDI4IDI1TDE0IDMzTDE0IDUwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLW9wYWNpdHk9IjAuMyI+PC9wYXRoPgo8cGF0aCBkPSJNMTQgMEwxNCAxN0wwIDI1TDAgNDJMMTQgNTBMMjggNDJMMjggMjVMMTQgMTciIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZWVlZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2Utb3BhY2l0eT0iMC4zIj48L3BhdGg+Cjwvc3ZnPg=='),
               linear-gradient(to bottom, $green 0%, $blue 100%) fixed;
 }
 
