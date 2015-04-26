@@ -3,6 +3,21 @@
   "metrics": {
     "requests": {
       "values": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        null
+      ],
+      "sum": 35,
+      "min": 7,
+      "max": 7,
+      "median": 7,
+      "average": 7
+    },
+    "gzipRequests": {
+      "values": [
         5,
         5,
         5,
@@ -15,21 +30,6 @@
       "max": 5,
       "median": 5,
       "average": 5
-    },
-    "gzipRequests": {
-      "values": [
-        3,
-        3,
-        3,
-        3,
-        3,
-        null
-      ],
-      "sum": 15,
-      "min": 3,
-      "max": 3,
-      "median": 3,
-      "average": 3
     },
     "postRequests": {
       "values": [
@@ -78,78 +78,78 @@
     },
     "bodySize": {
       "values": [
-        45023,
-        45031,
-        46486,
-        47946,
-        52331,
+        83513,
+        101174,
+        124097,
+        148917,
+        163814,
         null
       ],
-      "sum": 236817,
-      "min": 45023,
-      "max": 52331,
-      "median": 46486,
-      "average": 47363.4
+      "sum": 621515,
+      "min": 83513,
+      "max": 163814,
+      "median": 124097,
+      "average": 124303
     },
     "contentLength": {
       "values": [
-        111025,
-        111025,
-        111025,
-        112485,
-        113945,
+        140750,
+        163814,
+        163814,
+        163814,
+        165714,
         null
       ],
-      "sum": 559505,
-      "min": 111025,
-      "max": 113945,
-      "median": 111025,
-      "average": 111901
+      "sum": 797906,
+      "min": 140750,
+      "max": 165714,
+      "median": 163814,
+      "average": 159581.2
     },
     "httpTrafficCompleted": {
       "values": [
-        11868,
-        11872,
-        11874,
-        11874,
-        11875,
+        481,
+        768,
+        769,
+        808,
+        885,
         null
       ],
-      "sum": 59363,
-      "min": 11868,
-      "max": 11875,
-      "median": 11874,
-      "average": 11872.6
+      "sum": 3711,
+      "min": 481,
+      "max": 885,
+      "median": 769,
+      "average": 742.2
     },
     "timeToFirstByte": {
       "values": [
-        5944,
-        5951,
-        5969,
-        5970,
-        6057,
+        130,
+        132,
+        137,
+        152,
+        246,
         null
       ],
-      "sum": 29891,
-      "min": 5944,
-      "max": 6057,
-      "median": 5969,
-      "average": 5978.2
+      "sum": 797,
+      "min": 130,
+      "max": 246,
+      "median": 137,
+      "average": 159.4
     },
     "timeToLastByte": {
       "values": [
-        5983,
-        5984,
-        5997,
-        5997,
-        6081,
+        216,
+        217,
+        220,
+        222,
+        264,
         null
       ],
-      "sum": 30042,
-      "min": 5983,
-      "max": 6081,
-      "median": 5997,
-      "average": 6008.4
+      "sum": 1139,
+      "min": 216,
+      "max": 264,
+      "median": 220,
+      "average": 227.8
     },
     "ajaxRequests": {
       "values": [
@@ -198,33 +198,33 @@
     },
     "cssCount": {
       "values": [
-        1,
-        1,
-        1,
-        1,
-        1,
+        3,
+        3,
+        3,
+        3,
+        3,
         null
       ],
-      "sum": 5,
-      "min": 1,
-      "max": 1,
-      "median": 1,
-      "average": 1
+      "sum": 15,
+      "min": 3,
+      "max": 3,
+      "median": 3,
+      "average": 3
     },
     "cssSize": {
       "values": [
-        17968,
-        17968,
-        17968,
-        17968,
-        17968,
+        46255,
+        46255,
+        46255,
+        46255,
+        48155,
         null
       ],
-      "sum": 89840,
-      "min": 17968,
-      "max": 17968,
-      "median": 17968,
-      "average": 17968
+      "sum": 233175,
+      "min": 46255,
+      "max": 48155,
+      "median": 46255,
+      "average": 46635
     },
     "jsCount": {
       "values": [
@@ -243,18 +243,18 @@
     },
     "jsSize": {
       "values": [
-        1514,
-        1514,
-        1514,
-        2974,
-        4434,
+        2952,
+        26016,
+        26016,
+        26016,
+        26016,
         null
       ],
-      "sum": 11950,
-      "min": 1514,
-      "max": 4434,
-      "median": 1514,
-      "average": 2390
+      "sum": 107016,
+      "min": 2952,
+      "max": 26016,
+      "median": 26016,
+      "average": 21403.2
     },
     "jsonCount": {
       "values": [
@@ -378,33 +378,33 @@
     },
     "base64Count": {
       "values": [
-        3,
-        3,
-        3,
-        3,
-        3,
+        4,
+        4,
+        4,
+        4,
+        4,
         null
       ],
-      "sum": 15,
-      "min": 3,
-      "max": 3,
-      "median": 3,
-      "average": 3
+      "sum": 20,
+      "min": 4,
+      "max": 4,
+      "median": 4,
+      "average": 4
     },
     "base64Size": {
       "values": [
-        50023,
-        50023,
-        50023,
-        50023,
-        50023,
+        54479,
+        54479,
+        54479,
+        54479,
+        54479,
         null
       ],
-      "sum": 250115,
-      "min": 50023,
-      "max": 50023,
-      "median": 50023,
-      "average": 50023
+      "sum": 272395,
+      "min": 54479,
+      "max": 54479,
+      "median": 54479,
+      "average": 54479
     },
     "otherCount": {
       "values": [
@@ -438,6 +438,21 @@
     },
     "cacheHits": {
       "values": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        null
+      ],
+      "sum": 25,
+      "min": 5,
+      "max": 5,
+      "median": 5,
+      "average": 5
+    },
+    "cacheMisses": {
+      "values": [
         2,
         2,
         2,
@@ -450,21 +465,6 @@
       "max": 2,
       "median": 2,
       "average": 2
-    },
-    "cacheMisses": {
-      "values": [
-        3,
-        3,
-        3,
-        3,
-        3,
-        null
-      ],
-      "sum": 15,
-      "min": 3,
-      "max": 3,
-      "median": 3,
-      "average": 3
     },
     "cachePasses": {
       "values": [
@@ -498,18 +498,18 @@
     },
     "cachingTooShort": {
       "values": [
-        4,
-        4,
-        4,
-        4,
-        4,
+        6,
+        6,
+        6,
+        6,
+        6,
         null
       ],
-      "sum": 20,
-      "min": 4,
-      "max": 4,
-      "median": 4,
-      "average": 4
+      "sum": 30,
+      "min": 6,
+      "max": 6,
+      "median": 6,
+      "average": 6
     },
     "cachingDisabled": {
       "values": [
@@ -528,18 +528,18 @@
     },
     "oldCachingHeaders": {
       "values": [
-        5,
-        5,
-        5,
-        5,
-        5,
+        7,
+        7,
+        7,
+        7,
+        7,
         null
       ],
-      "sum": 25,
-      "min": 5,
-      "max": 5,
-      "median": 5,
-      "average": 5
+      "sum": 35,
+      "min": 7,
+      "max": 7,
+      "median": 7,
+      "average": 7
     },
     "consoleMessages": {
       "values": [
@@ -963,33 +963,33 @@
     },
     "maxRequestsPerDomain": {
       "values": [
-        4,
-        4,
-        4,
-        4,
-        4,
+        6,
+        6,
+        6,
+        6,
+        6,
         null
       ],
-      "sum": 20,
-      "min": 4,
-      "max": 4,
-      "median": 4,
-      "average": 4
+      "sum": 30,
+      "min": 6,
+      "max": 6,
+      "median": 6,
+      "average": 6
     },
     "medianRequestsPerDomain": {
       "values": [
-        2.5,
-        2.5,
-        2.5,
-        2.5,
-        2.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
         null
       ],
-      "sum": 12.5,
-      "min": 2.5,
-      "max": 2.5,
-      "median": 2.5,
-      "average": 2.5
+      "sum": 17.5,
+      "min": 3.5,
+      "max": 3.5,
+      "median": 3.5,
+      "average": 3.5
     },
     "eventsBound": {
       "values": [
@@ -1038,93 +1038,93 @@
     },
     "headersCount": {
       "values": [
-        99,
-        99,
-        99,
-        99,
-        99,
+        141,
+        141,
+        141,
+        141,
+        141,
         null
       ],
-      "sum": 495,
-      "min": 99,
-      "max": 99,
-      "median": 99,
-      "average": 99
+      "sum": 705,
+      "min": 141,
+      "max": 141,
+      "median": 141,
+      "average": 141
     },
     "headersSentCount": {
       "values": [
-        14,
-        14,
-        14,
-        14,
-        14,
+        20,
+        20,
+        20,
+        20,
+        20,
         null
       ],
-      "sum": 70,
-      "min": 14,
-      "max": 14,
-      "median": 14,
-      "average": 14
+      "sum": 100,
+      "min": 20,
+      "max": 20,
+      "median": 20,
+      "average": 20
     },
     "headersRecvCount": {
       "values": [
-        85,
-        85,
-        85,
-        85,
-        85,
+        121,
+        121,
+        121,
+        121,
+        121,
         null
       ],
-      "sum": 425,
-      "min": 85,
-      "max": 85,
-      "median": 85,
-      "average": 85
+      "sum": 605,
+      "min": 121,
+      "max": 121,
+      "median": 121,
+      "average": 121
     },
     "headersSize": {
       "values": [
-        3156,
-        3156,
-        3169,
-        3169,
-        3169,
+        4370,
+        4374,
+        4375,
+        4378,
+        4385,
         null
       ],
-      "sum": 15819,
-      "min": 3156,
-      "max": 3169,
-      "median": 3169,
-      "average": 3163.8
+      "sum": 21882,
+      "min": 4370,
+      "max": 4385,
+      "median": 4375,
+      "average": 4376.4
     },
     "headersSentSize": {
       "values": [
-        574,
-        574,
-        574,
-        574,
-        574,
+        788,
+        788,
+        788,
+        788,
+        788,
         null
       ],
-      "sum": 2870,
-      "min": 574,
-      "max": 574,
-      "median": 574,
-      "average": 574
+      "sum": 3940,
+      "min": 788,
+      "max": 788,
+      "median": 788,
+      "average": 788
     },
     "headersRecvSize": {
       "values": [
-        2582,
-        2582,
-        2595,
-        2595,
-        2595,
+        3582,
+        3586,
+        3587,
+        3590,
+        3597,
         null
       ],
-      "sum": 12949,
-      "min": 2582,
-      "max": 2595,
-      "median": 2595,
-      "average": 2589.8
+      "sum": 17942,
+      "min": 3582,
+      "max": 3597,
+      "median": 3587,
+      "average": 3588.4
     },
     "headersBiggerThanContent": {
       "values": [
@@ -1293,18 +1293,18 @@
     },
     "assetsWithCookies": {
       "values": [
-        3,
-        3,
-        3,
-        3,
-        3,
+        5,
+        5,
+        5,
+        5,
+        5,
         null
       ],
-      "sum": 15,
-      "min": 3,
-      "max": 3,
-      "median": 3,
-      "average": 3
+      "sum": 25,
+      "min": 5,
+      "max": 5,
+      "median": 5,
+      "average": 5
     },
     "smallImages": {
       "values": [
@@ -1338,138 +1338,138 @@
     },
     "timeToFirstCss": {
       "values": [
-        6086,
-        6130,
-        6139,
-        6160,
-        6183,
+        232,
+        235,
+        237,
+        280,
+        287,
         null
       ],
-      "sum": 30698,
-      "min": 6086,
-      "max": 6183,
-      "median": 6139,
-      "average": 6139.6
+      "sum": 1271,
+      "min": 232,
+      "max": 287,
+      "median": 237,
+      "average": 254.2
     },
     "timeToFirstJs": {
       "values": [
-        5994,
-        6001,
-        6001,
-        6070,
-        6082,
+        236,
+        237,
+        240,
+        242,
+        288,
         null
       ],
-      "sum": 30148,
-      "min": 5994,
-      "max": 6082,
-      "median": 6001,
-      "average": 6029.6
+      "sum": 1243,
+      "min": 236,
+      "max": 288,
+      "median": 240,
+      "average": 248.6
     },
     "timeToFirstImage": {
       "values": [
-        6050,
-        6063,
-        6115,
-        6125,
-        6169,
+        284,
+        286,
+        331,
+        336,
+        366,
         null
       ],
-      "sum": 30522,
-      "min": 6050,
-      "max": 6169,
-      "median": 6115,
-      "average": 6104.4
+      "sum": 1603,
+      "min": 284,
+      "max": 366,
+      "median": 331,
+      "average": 320.6
     },
     "domInteractive": {
       "values": [
-        6008,
-        6014,
-        6014,
-        6084,
-        6096,
+        242,
+        252,
+        293,
+        313,
+        347,
         null
       ],
-      "sum": 30216,
-      "min": 6008,
-      "max": 6096,
-      "median": 6014,
-      "average": 6043.2
+      "sum": 1447,
+      "min": 242,
+      "max": 347,
+      "median": 293,
+      "average": 289.4
     },
     "domContentLoaded": {
       "values": [
-        6008,
-        6014,
-        6015,
-        6084,
-        6097,
+        242,
+        252,
+        293,
+        314,
+        347,
         null
       ],
-      "sum": 30218,
-      "min": 6008,
-      "max": 6097,
-      "median": 6015,
-      "average": 6043.6
+      "sum": 1448,
+      "min": 242,
+      "max": 347,
+      "median": 293,
+      "average": 289.6
     },
     "domContentLoadedEnd": {
       "values": [
-        6010,
-        6016,
-        6016,
-        6085,
-        6098,
+        289,
+        294,
+        294,
+        315,
+        349,
         null
       ],
-      "sum": 30225,
-      "min": 6010,
-      "max": 6098,
-      "median": 6016,
-      "average": 6045
+      "sum": 1541,
+      "min": 289,
+      "max": 349,
+      "median": 294,
+      "average": 308.2
     },
     "domComplete": {
       "values": [
-        11909,
-        11912,
-        11913,
-        11915,
-        11917,
+        497,
+        778,
+        781,
+        815,
+        893,
         null
       ],
-      "sum": 59566,
-      "min": 11909,
-      "max": 11917,
-      "median": 11913,
-      "average": 11913.2
+      "sum": 3764,
+      "min": 497,
+      "max": 893,
+      "median": 781,
+      "average": 752.8
     },
     "timeBackend": {
       "values": [
-        33,
-        33,
-        33,
-        33,
-        34,
+        14,
+        15,
+        16,
+        21,
+        22,
         null
       ],
-      "sum": 166,
-      "min": 33,
-      "max": 34,
-      "median": 33,
-      "average": 33.2
+      "sum": 88,
+      "min": 14,
+      "max": 22,
+      "median": 16,
+      "average": 17.6
     },
     "timeFrontend": {
       "values": [
-        66,
-        67,
-        67,
-        67,
-        67,
+        78,
+        79,
+        84,
+        85,
+        86,
         null
       ],
-      "sum": 334,
-      "min": 66,
-      "max": 67,
-      "median": 67,
-      "average": 66.8
+      "sum": 412,
+      "min": 78,
+      "max": 86,
+      "median": 84,
+      "average": 82.4
     },
     "blockedRequests": {
       "values": [
@@ -1593,137 +1593,149 @@
     },
     "fastestResponse": {
       "values": [
-        13,
-        13,
-        14,
-        14,
-        15,
+        20,
+        24,
+        25,
+        25,
+        52,
         null
       ],
-      "sum": 69,
-      "min": 13,
-      "max": 15,
-      "median": 14,
-      "average": 13.8
+      "sum": 146,
+      "min": 20,
+      "max": 52,
+      "median": 25,
+      "average": 29.2
     },
     "slowestResponse": {
       "values": [
-        5983,
-        5984,
-        5997,
-        5997,
-        6081,
+        220,
+        543,
+        545,
+        581,
+        586,
         null
       ],
-      "sum": 30042,
-      "min": 5983,
-      "max": 6081,
-      "median": 5997,
-      "average": 6008.4
+      "sum": 2475,
+      "min": 220,
+      "max": 586,
+      "median": 545,
+      "average": 495
     },
     "smallestLatency": {
       "values": [
-        12,
-        13,
-        13,
-        13,
-        15,
+        19,
+        24,
+        24,
+        24,
+        52,
         null
       ],
-      "sum": 66,
-      "min": 12,
-      "max": 15,
-      "median": 13,
-      "average": 13.2
+      "sum": 143,
+      "min": 19,
+      "max": 52,
+      "median": 24,
+      "average": 28.6
     },
     "biggestLatency": {
       "values": [
-        5944,
-        5951,
-        5969,
-        5970,
-        6057,
+        183,
+        516,
+        522,
+        528,
+        536,
         null
       ],
-      "sum": 29891,
-      "min": 5944,
-      "max": 6057,
-      "median": 5969,
-      "average": 5978.2
+      "sum": 2285,
+      "min": 183,
+      "max": 536,
+      "median": 522,
+      "average": 457
     },
     "medianResponse": {
       "values": [
-        52,
-        95,
-        98,
-        124,
-        193,
+        45,
+        64,
+        65,
+        65,
+        123,
         null
       ],
-      "sum": 562,
-      "min": 52,
-      "max": 193,
-      "median": 98,
-      "average": 112.4
+      "sum": 362,
+      "min": 45,
+      "max": 123,
+      "median": 65,
+      "average": 72.4
     },
     "medianLatency": {
       "values": [
         26,
-        95,
-        98,
-        105,
-        151,
+        58,
+        64,
+        65,
+        116,
         null
       ],
-      "sum": 475,
+      "sum": 329,
       "min": 26,
-      "max": 151,
-      "median": 98,
-      "average": 95
+      "max": 116,
+      "median": 64,
+      "average": 65.8
     }
   },
   "offenders": {
     "gzipRequests": [
       "http://nigelarmstrong.me/ (gzip: 24.04 kB / uncompressed: 24.04 kB)",
+      "http://nigelarmstrong.me/css/patrickHandNigel.woff.css (gzip: 5.94 kB / uncompressed: 5.94 kB)",
       "http://nigelarmstrong.me/js/scripts.4926.js (gzip: 0.43 kB / uncompressed: 0.43 kB)",
-      "http://nigelarmstrong.me/css/styles.55b3.css (gzip: 17.55 kB / uncompressed: 17.55 kB)"
+      "http://nigelarmstrong.me/css/optimizedWebFonts.woff.css (gzip: 23.54 kB / uncompressed: 23.54 kB)",
+      "http://nigelarmstrong.me/css/styles.55b3.css (gzip: 17.55 kB / uncompressed: 17.55 kB)",
+      "http://nigelarmstrong.me/css/optimizedWebFonts.woff.css (gzip: 21.69 kB / uncompressed: 21.69 kB)"
     ],
     "htmlCount": [
       "http://nigelarmstrong.me/ (24.04 kB)"
     ],
     "cssCount": [
-      "http://nigelarmstrong.me/css/styles.55b3.css (17.55 kB)"
+      "http://nigelarmstrong.me/css/patrickHandNigel.woff.css (5.94 kB)",
+      "http://nigelarmstrong.me/css/optimizedWebFonts.woff.css (23.54 kB)",
+      "http://nigelarmstrong.me/css/styles.55b3.css (17.55 kB)",
+      "http://nigelarmstrong.me/css/optimizedWebFonts.woff.css (21.69 kB)"
     ],
     "jsCount": [
+      "http://www.google-analytics.com/analytics.js (24.98 kB)",
       "http://nigelarmstrong.me/js/scripts.4926.js (0.43 kB)",
-      "http://www.google-analytics.com/analytics.js (1.05 kB)",
-      "http://www.google-analytics.com/analytics.js (2.48 kB)",
-      "http://www.google-analytics.com/analytics.js (3.90 kB)"
+      "http://www.google-analytics.com/analytics.js (2.46 kB)"
     ],
     "imageCount": [
       "http://nigelarmstrong.me/img/Nigel_Armstrong_Square.4fe6.jpg (65.36 kB)"
     ],
     "cacheHits": [
       "http://nigelarmstrong.me/",
-      "http://www.google-analytics.com/analytics.js"
-    ],
-    "cacheMisses": [
-      "http://nigelarmstrong.me/js/scripts.4926.js",
+      "http://www.google-analytics.com/analytics.js",
+      "http://nigelarmstrong.me/css/patrickHandNigel.woff.css",
       "http://nigelarmstrong.me/img/Nigel_Armstrong_Square.4fe6.jpg",
       "http://nigelarmstrong.me/css/styles.55b3.css"
     ],
+    "cacheMisses": [
+      "http://nigelarmstrong.me/js/scripts.4926.js",
+      "http://nigelarmstrong.me/css/optimizedWebFonts.woff.css"
+    ],
     "cachingTooShort": [
+      "http://www.google-analytics.com/analytics.js cached for 7200 s",
+      "http://nigelarmstrong.me/css/patrickHandNigel.woff.css cached for 14400 s",
       "http://nigelarmstrong.me/js/scripts.4926.js cached for 14400 s",
       "http://nigelarmstrong.me/img/Nigel_Armstrong_Square.4fe6.jpg cached for 14400 s",
-      "http://nigelarmstrong.me/css/styles.55b3.css cached for 14400 s",
-      "http://www.google-analytics.com/analytics.js cached for 7200 s"
+      "http://nigelarmstrong.me/css/optimizedWebFonts.woff.css cached for 14400 s",
+      "http://nigelarmstrong.me/css/styles.55b3.css cached for 14400 s"
     ],
     "oldCachingHeaders": [
-      "http://nigelarmstrong.me/ - Expires: Fri, 03 Apr 2015 04:09:40 GMT",
-      "http://nigelarmstrong.me/js/scripts.4926.js - Expires: Fri, 03 Apr 2015 09:11:22 GMT",
-      "http://nigelarmstrong.me/img/Nigel_Armstrong_Square.4fe6.jpg - Expires: Fri, 03 Apr 2015 09:11:22 GMT",
-      "http://nigelarmstrong.me/css/styles.55b3.css - Expires: Fri, 03 Apr 2015 09:11:22 GMT",
-      "http://www.google-analytics.com/analytics.js - Expires: Fri, 03 Apr 2015 05:39:49 GMT"
+      "http://nigelarmstrong.me/ - Expires: Sun, 26 Apr 2015 07:09:10 GMT",
+      "http://www.google-analytics.com/analytics.js - Expires: Sun, 26 Apr 2015 07:43:26 GMT",
+      "http://nigelarmstrong.me/css/patrickHandNigel.woff.css - Expires: Sun, 26 Apr 2015 10:59:13 GMT",
+      "http://nigelarmstrong.me/js/scripts.4926.js - Expires: Sun, 26 Apr 2015 10:59:13 GMT",
+      "http://nigelarmstrong.me/img/Nigel_Armstrong_Square.4fe6.jpg - Expires: Sun, 26 Apr 2015 10:59:13 GMT",
+      "http://nigelarmstrong.me/css/optimizedWebFonts.woff.css - Expires: Sun, 26 Apr 2015 10:59:13 GMT",
+      "http://nigelarmstrong.me/css/styles.55b3.css - Expires: Sun, 26 Apr 2015 10:59:13 GMT",
+      "http://www.google-analytics.com/analytics.js - Expires: Sun, 26 Apr 2015 08:54:06 GMT"
     ],
     "domainsWithCookies": [
       "nigelarmstrong.me: 1 cookie(s)"
@@ -1752,7 +1764,7 @@
       "tag name \"script\" (in #document): 3 queries"
     ],
     "domains": [
-      "nigelarmstrong.me: 4 request(s)",
+      "nigelarmstrong.me: 6 request(s)",
       "www.google-analytics.com: 1 request(s)"
     ],
     "globalVariables": [
@@ -1765,7 +1777,7 @@
       "gaGlobal"
     ],
     "headersBiggerThanContent": [
-      "http://nigelarmstrong.me/js/scripts.4926.js (body: 0.43 kB / headers: 0.54 kB)",
+      "http://nigelarmstrong.me/js/scripts.4926.js (body: 0.43 kB / headers: 0.52 kB)",
       "http://nigelarmstrong.me/js/scripts.4926.js (body: 0.43 kB / headers: 0.53 kB)"
     ],
     "localStorageEntries": [
@@ -1778,36 +1790,39 @@
       "http://www.google-analytics.com/analytics.js (JS)"
     ],
     "assetsWithCookies": [
+      "http://nigelarmstrong.me/css/patrickHandNigel.woff.css (CSS)",
       "http://nigelarmstrong.me/js/scripts.4926.js (JS)",
       "http://nigelarmstrong.me/img/Nigel_Armstrong_Square.4fe6.jpg (IMAGE)",
+      "http://nigelarmstrong.me/css/optimizedWebFonts.woff.css (CSS)",
       "http://nigelarmstrong.me/css/styles.55b3.css (CSS)"
     ],
     "timeToFirstCss": [
-      "http://nigelarmstrong.me/css/styles.55b3.css received in 6130 ms",
-      "http://nigelarmstrong.me/css/styles.55b3.css received in 6160 ms",
-      "http://nigelarmstrong.me/css/styles.55b3.css received in 6086 ms",
-      "http://nigelarmstrong.me/css/styles.55b3.css received in 6183 ms",
-      "http://nigelarmstrong.me/css/styles.55b3.css received in 6139 ms"
+      "http://nigelarmstrong.me/css/patrickHandNigel.woff.css received in 287 ms",
+      "http://nigelarmstrong.me/css/patrickHandNigel.woff.css received in 232 ms",
+      "http://nigelarmstrong.me/css/patrickHandNigel.woff.css received in 237 ms",
+      "http://nigelarmstrong.me/css/patrickHandNigel.woff.css received in 235 ms",
+      "http://nigelarmstrong.me/css/patrickHandNigel.woff.css received in 280 ms"
     ],
     "timeToFirstJs": [
-      "http://nigelarmstrong.me/js/scripts.4926.js received in 6001 ms",
-      "http://nigelarmstrong.me/js/scripts.4926.js received in 6070 ms",
-      "http://nigelarmstrong.me/js/scripts.4926.js received in 5994 ms",
-      "http://nigelarmstrong.me/js/scripts.4926.js received in 6082 ms"
+      "http://www.google-analytics.com/analytics.js received in 236 ms",
+      "http://www.google-analytics.com/analytics.js received in 237 ms",
+      "http://www.google-analytics.com/analytics.js received in 242 ms",
+      "http://www.google-analytics.com/analytics.js received in 240 ms",
+      "http://nigelarmstrong.me/js/scripts.4926.js received in 288 ms"
     ],
     "timeToFirstImage": [
-      "http://nigelarmstrong.me/img/Nigel_Armstrong_Square.4fe6.jpg received in 6115 ms",
-      "http://nigelarmstrong.me/img/Nigel_Armstrong_Square.4fe6.jpg received in 6063 ms",
-      "http://nigelarmstrong.me/img/Nigel_Armstrong_Square.4fe6.jpg received in 6050 ms",
-      "http://nigelarmstrong.me/img/Nigel_Armstrong_Square.4fe6.jpg received in 6169 ms",
-      "http://nigelarmstrong.me/img/Nigel_Armstrong_Square.4fe6.jpg received in 6125 ms"
+      "http://nigelarmstrong.me/img/Nigel_Armstrong_Square.4fe6.jpg received in 366 ms",
+      "http://nigelarmstrong.me/img/Nigel_Armstrong_Square.4fe6.jpg received in 284 ms",
+      "http://nigelarmstrong.me/img/Nigel_Armstrong_Square.4fe6.jpg received in 331 ms",
+      "http://nigelarmstrong.me/img/Nigel_Armstrong_Square.4fe6.jpg received in 286 ms",
+      "http://nigelarmstrong.me/img/Nigel_Armstrong_Square.4fe6.jpg received in 336 ms"
     ],
     "blockedRequests": [
-      "http://www.google-analytics.com/r/collect?v=1&_v=j33&a=943775235&t=pageview&_s=1&dl=http%3A%2F%2Fnigelarmstrong.me%2F&ul=en-us&de=UTF-8&dt=Nigel's%20Homepage&sd=32-bit&sr=1680x1050&vp=1280x1024&je=0&_u=AEAAAEQAI~&jid=1375425067&cid=704353382.1428037888&tid=UA-61063672-1&_r=1&z=2059065504",
-      "http://www.google-analytics.com/r/collect?v=1&_v=j33&a=956599665&t=pageview&_s=1&dl=http%3A%2F%2Fnigelarmstrong.me%2F&ul=en-us&de=UTF-8&dt=Nigel's%20Homepage&sd=32-bit&sr=1680x1050&vp=1280x1024&je=0&_u=AEAAAEQAI~&jid=1405476994&cid=2021966684.1428037888&tid=UA-61063672-1&_r=1&z=1323358722",
-      "http://www.google-analytics.com/r/collect?v=1&_v=j33&a=1047891653&t=pageview&_s=1&dl=http%3A%2F%2Fnigelarmstrong.me%2F&ul=en-us&de=UTF-8&dt=Nigel's%20Homepage&sd=32-bit&sr=1680x1050&vp=1280x1024&je=0&_u=AEAAAEQAI~&jid=370865050&cid=1669668219.1428037888&tid=UA-61063672-1&_r=1&z=1032730633",
-      "http://www.google-analytics.com/r/collect?v=1&_v=j33&a=1343024670&t=pageview&_s=1&dl=http%3A%2F%2Fnigelarmstrong.me%2F&ul=en-us&de=UTF-8&dt=Nigel's%20Homepage&sd=32-bit&sr=1680x1050&vp=1280x1024&je=0&_u=AEAAAEQAI~&jid=920224284&cid=567164848.1428037888&tid=UA-61063672-1&_r=1&z=1238823095",
-      "http://www.google-analytics.com/r/collect?v=1&_v=j33&a=1473280496&t=pageview&_s=1&dl=http%3A%2F%2Fnigelarmstrong.me%2F&ul=en-us&de=UTF-8&dt=Nigel's%20Homepage&sd=32-bit&sr=1680x1050&vp=1280x1024&je=0&_u=AEAAAEQAI~&jid=1579328944&cid=769762176.1428037888&tid=UA-61063672-1&_r=1&z=130255699"
+      "http://www.google-analytics.com/r/collect?v=1&_v=j35&a=1210673320&t=pageview&_s=1&dl=http%3A%2F%2Fnigelarmstrong.me%2F&ul=en-us&de=UTF-8&dt=Nigel's%20Homepage&sd=32-bit&sr=1024x768&vp=1280x1024&je=0&_u=AEAAAEQAI~&jid=792822096&cid=500835813.1430031553&tid=UA-61063672-1&_r=1&z=1694844796",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j35&a=1910016774&t=pageview&_s=1&dl=http%3A%2F%2Fnigelarmstrong.me%2F&ul=en-us&de=UTF-8&dt=Nigel's%20Homepage&sd=32-bit&sr=1024x768&vp=1280x1024&je=0&_u=AEAAAEQAI~&jid=810866899&cid=719409724.1430031553&tid=UA-61063672-1&_r=1&z=1010196175",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j35&a=1492725371&t=pageview&_s=1&dl=http%3A%2F%2Fnigelarmstrong.me%2F&ul=en-us&de=UTF-8&dt=Nigel's%20Homepage&sd=32-bit&sr=1024x768&vp=1280x1024&je=0&_u=AEAAAEQAI~&jid=866141106&cid=2009972882.1430031553&tid=UA-61063672-1&_r=1&z=1397217110",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j35&a=240256190&t=pageview&_s=1&dl=http%3A%2F%2Fnigelarmstrong.me%2F&ul=en-us&de=UTF-8&dt=Nigel's%20Homepage&sd=32-bit&sr=1024x768&vp=1280x1024&je=0&_u=AEAAAEQAI~&jid=1344820709&cid=1142603110.1430031553&tid=UA-61063672-1&_r=1&z=2061041834",
+      "http://www.google-analytics.com/r/collect?v=1&_v=j35&a=753125754&t=pageview&_s=1&dl=http%3A%2F%2Fnigelarmstrong.me%2F&ul=en-us&de=UTF-8&dt=Nigel's%20Homepage&sd=32-bit&sr=1024x768&vp=1280x1024&je=0&_u=AEAAAEQAI~&jid=1634866489&cid=795651471.1430031553&tid=UA-61063672-1&_r=1&z=908034912"
     ],
     "smallestResponse": [
       "http://nigelarmstrong.me/js/scripts.4926.js (0.43 kB)"
@@ -1816,30 +1831,31 @@
       "http://nigelarmstrong.me/img/Nigel_Armstrong_Square.4fe6.jpg (65.36 kB)"
     ],
     "fastestResponse": [
-      "http://nigelarmstrong.me/js/scripts.4926.js (14 ms)",
-      "http://nigelarmstrong.me/js/scripts.4926.js (15 ms)",
-      "http://nigelarmstrong.me/css/styles.55b3.css (14 ms)",
-      "http://nigelarmstrong.me/css/styles.55b3.css (13 ms)",
-      "http://nigelarmstrong.me/js/scripts.4926.js (13 ms)"
+      "http://www.google-analytics.com/analytics.js (52 ms)",
+      "http://nigelarmstrong.me/js/scripts.4926.js (24 ms)",
+      "http://nigelarmstrong.me/js/scripts.4926.js (25 ms)",
+      "http://nigelarmstrong.me/css/styles.55b3.css (25 ms)",
+      "http://nigelarmstrong.me/css/styles.55b3.css (20 ms)"
     ],
     "slowestResponse": [
-      "http://nigelarmstrong.me/ (5997 ms)",
-      "http://nigelarmstrong.me/ (5983 ms)",
-      "http://nigelarmstrong.me/ (5984 ms)",
-      "http://nigelarmstrong.me/ (6081 ms)"
+      "http://nigelarmstrong.me/ (220 ms)",
+      "http://nigelarmstrong.me/css/optimizedWebFonts.woff.css (586 ms)",
+      "http://nigelarmstrong.me/css/optimizedWebFonts.woff.css (543 ms)",
+      "http://nigelarmstrong.me/css/optimizedWebFonts.woff.css (545 ms)",
+      "http://nigelarmstrong.me/css/optimizedWebFonts.woff.css (581 ms)"
     ],
     "smallestLatency": [
-      "http://nigelarmstrong.me/js/scripts.4926.js (13 ms)",
-      "http://nigelarmstrong.me/js/scripts.4926.js (15 ms)",
-      "http://nigelarmstrong.me/css/styles.55b3.css (13 ms)",
-      "http://nigelarmstrong.me/js/scripts.4926.js (12 ms)"
+      "http://www.google-analytics.com/analytics.js (52 ms)",
+      "http://nigelarmstrong.me/js/scripts.4926.js (24 ms)",
+      "http://nigelarmstrong.me/css/styles.55b3.css (24 ms)",
+      "http://nigelarmstrong.me/css/styles.55b3.css (19 ms)"
     ],
     "biggestLatency": [
-      "http://nigelarmstrong.me/ (5970 ms)",
-      "http://nigelarmstrong.me/ (5969 ms)",
-      "http://nigelarmstrong.me/ (5951 ms)",
-      "http://nigelarmstrong.me/ (5944 ms)",
-      "http://nigelarmstrong.me/ (6057 ms)"
+      "http://nigelarmstrong.me/css/optimizedWebFonts.woff.css (183 ms)",
+      "http://nigelarmstrong.me/css/optimizedWebFonts.woff.css (528 ms)",
+      "http://nigelarmstrong.me/css/optimizedWebFonts.woff.css (516 ms)",
+      "http://nigelarmstrong.me/css/optimizedWebFonts.woff.css (522 ms)",
+      "http://nigelarmstrong.me/css/optimizedWebFonts.woff.css (536 ms)"
     ]
   }
 }
