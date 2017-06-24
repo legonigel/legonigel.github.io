@@ -3,21 +3,22 @@ layout: page
 title: About
 permalink: /about/
 page-class: page-about
-description: 'About Nigel Armstrong, a student of Christopher Newport University'
+description: 'About Nigel Armstrong, a computer engineer/controls engineer'
 sitemap:
   priority: 0.7
   changefreq: 'monthly'
 ---
 
-Hi, my name is __Nigel Armstrong__. I'm currently a student at [Christopher Newport University](http://cnu.edu/pcs/academics/ce.asp) studying Computer Engineering.
+Hi, my name is __Nigel Armstrong__. I'm studied Computer Engineering at [Christopher Newport University](http://cnu.edu/academics/departments/pcse/majorsminors/computerengineering/).
 
-I am involved in many extracurricular activities including:
+I now work as a Controls Engineer for [Swisslog](http://swisslog.com). In my free time I still support the [AUVSI Student Unmanned Aerial Systems (SUAS) Competition](http://auvsi-suas.org).
 
- * President of the Student chapter of the Institute of Electrical and Electronics Engineers (IEEE)
- * Team Captain and Mission Commander for the [Student Unmanned Aerial Systems (SUAS) Competition Team](//uas.pcs.cnu.edu)
+When I was a student, I was involved in many extracurricular activities including:
+
+ * President of the Student chapter of the Institute of Electrical and Electronics Engineers (IEEE).
+ * Team Captain and Mission Commander for the [Student Unmanned Aerial Systems (SUAS) Competition Team](https://github.com/cnuuaslab)
  * Active member of the Association for Computing Machinery (ACM)
  * Active member of the [Linux Users Group (LUG)](//cnulug.org)
- 
-My largest involvment is with the Unmanned Aerial Systems Team. Our team designs, builds, and fly autonomous vehicles, including multirotors (quadcopters and hexacopters) and planes. 
-We conduct undergraduate research in autonomous systems and prepare to compete in the [AUVSI SUAS competition](http://www.auvsi-seafarer.org/) each summer.
-This is my second year as Mission Commander for the team and my first year as Team Captain. 
+
+My largest involvement was with the Unmanned Aerial Systems Team. The team designs, builds, and fly autonomous vehicles, including multirotors (quadcopters and hexacopters) and planes.
+We conduct undergraduate research in autonomous systems and work to compete in the [AUVSI SUAS competition](http://www.auvsi-seafarer.org/) each summer.
