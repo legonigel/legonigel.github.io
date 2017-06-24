@@ -9,10 +9,9 @@ sitemap:
   changefreq: 'monthly'
 ---
 
-Hi, my name is __Nigel Armstrong__. I'm studied Computer Engineering at [Christopher Newport University](http://cnu.edu/academics/departments/pcse/majorsminors/computerengineering/).
+Hi, my name is __Nigel Armstrong__. I now work as a Controls Engineer for [Swisslog](http://swisslog.com). In my free time I support the [AUVSI Student Unmanned Aerial Systems (SUAS) Competition](http://auvsi-suas.org) that I used to compete in.
 
-I now work as a Controls Engineer for [Swisslog](http://swisslog.com). In my free time I still support the [AUVSI Student Unmanned Aerial Systems (SUAS) Competition](http://auvsi-suas.org).
-
+I studied Computer Engineering at [Christopher Newport University](http://cnu.edu/academics/departments/pcse/majorsminors/computerengineering/).
 When I was a student, I was involved in many extracurricular activities including:
 
  * President of the Student chapter of the Institute of Electrical and Electronics Engineers (IEEE).
