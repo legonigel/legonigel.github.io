@@ -9,7 +9,7 @@ sitemap:
   changefreq: 'monthly'
 ---
 
-Hi, my name is __Nigel Armstrong__. I work as a Controls Engineer for [Swisslog](http://swisslog.com).
+Hi, my name is __Nigel Armstrong__. I work as a Controls Engineer for [Swisslog](http://swisslog.com) implementing large industiral controls system for automated conveyors and cranes.
 
 In my free time I support the [AUVSI Student Unmanned Aerial Systems (SUAS) Competition](http://auvsi-suas.org) that I used to compete in.
 
@@ -18,8 +18,8 @@ When I was a student, I was involved in many extracurricular activities includin
 
  * President of the Student chapter of the Institute of Electrical and Electronics Engineers (IEEE).
  * Team Captain and Mission Commander for the [Student Unmanned Aerial Systems (SUAS) Competition Team](https://github.com/cnuuaslab)
- * Active member of the Association for Computing Machinery (ACM)
- * Active member of the [Linux Users Group (LUG)](//cnulug.org)
+ * Member of the Association for Computing Machinery (ACM)
+ * Member of the [Linux Users Group (LUG)](//cnulug.org)
 
 My largest involvement was with the Unmanned Aerial Systems Team. The team designs, builds, and fly autonomous vehicles, including multirotors (quadcopters and hexacopters) and planes.
-We conduct undergraduate research in autonomous systems and work to compete in the [AUVSI SUAS competition](http://www.auvsi-seafarer.org/) each summer.
+They conduct undergraduate research in autonomous systems and work to compete in the [AUVSI SUAS competition](http://www.auvsi-seafarer.org/) each summer. Under my direction the team won the Dr. Arthur Reyes Memorial Safety Award in 2015 and the Just Joe Sportsmanship Award in 2016.
