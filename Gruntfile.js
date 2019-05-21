@@ -18,22 +18,14 @@ module.exports = function (grunt) {
       app: 'app',
       dist: 'dist'
     },
-    devUpdate: {
-      check: {
-        options: {
-          reportUpdated: false,
-          updateType: 'report'
-        }
-      }
-    },
     watch: {
       sass: {
         files: ['<%= yeoman.app %>/_scss/**/*.scss'],
-        tasks: ['sass', 'autoprefixer:server', 'penthouse']
+        tasks: ['sass', 'postcss:server', 'penthouse']
       },
-      autoprefixer: {
+      postcss: {
         files: ['<%= yeoman.app %>/css/styles.css'],
-        tasks: ['copy:stageCss', 'autoprefixer:server']
+        tasks: ['copy:stageCss', 'postcss:server']
       },
       jekyll: {
         files: ['<%= yeoman.app %>/**/*.{html,md,rb,svg,xml,yml}'],
@@ -75,10 +67,8 @@ module.exports = function (grunt) {
           dot: true,
           src: [
             '<%= yeoman.dist %>/*',
-            // Running Jekyll also cleans the target directory.  Exclude any
-            // non-standard `keep_files` here (e.g., the generated files
-            // directory from Jekyll Picture Tag).
             '!<%= yeoman.dist %>/.git*',
+            '!<%= yeoman.dist %>/img/**', // don’t clean this directory because these files don’t get revved and I optimize by hand
             '!<%= yeoman.dist %>/perf'
           ]
         }]
@@ -103,8 +93,8 @@ module.exports = function (grunt) {
     },
     sass: {
       options: {
-        bundleExec: true,
-        sourcemap: 'none'
+        precision: 5,
+        sourceMap: false
       },
       dist: {
         files: {
@@ -112,28 +102,18 @@ module.exports = function (grunt) {
         }
       },
     },
-    autoprefixer: {
+    postcss: {
       options: {
-        browsers: [
-          'last 2 version',
-          'safari 6',
-          'ie 9',
-          'opera 12.1',
-          'ios 6',
-          'android 4'
+        processors: [
+          require('autoprefixer')({browsers: 'last 2 versions, safari 6, ie 9, opera 12.1, ios 6, android 4'})
         ]
       },
       dist: {
-        expand: true,
-        cwd: '.tmp',
-        src: 'concat/css/styles.css',
-        dest: '.tmp'
+        src: '.tmp/concat/css/styles.css',
+        dest: '.tmp/styles.css'
       },
       server: {
-        expand: true,
-        cwd: '.tmp',
-        src: 'css/*.css',
-        dest: '.tmp'
+        src: '.tmp/css/*.css',
       }
     },
     penthouse: {
@@ -166,12 +146,13 @@ module.exports = function (grunt) {
       server: {
         options: {
           config: '_config.yml',
-          dest: '.jekyll'
+          dest: '.jekyll',
+          incremental: true
         }
       },
       check: {
         options: {
-          doctor: true,
+          doctor: true
         }
       }
     },
@@ -184,10 +165,14 @@ module.exports = function (grunt) {
     usemin: {
       options: {
         assetsDirs: '<%= yeoman.dist %>',
+        blockReplacements: { // https://github.com/yeoman/grunt-usemin/issues/391
+          js: function (block){
+            return '<script async src="' + block.dest + '"><\/script>';
+          }
+        },
         patterns: {
           html: [
             [/<link[^\>]+href=['"]([^"']+)["']/gm, 'Update the link tags'],
-            [/<meta[^\>]+content=['"]http?:?\/\/[^\/"']+([^"']+)["']/gm,'Update meta tags'],
             [/loadCSS\(['"]([^"']+)['"]\)/gm, 'Replacing reference to CSS within loadCSS']
           ]
         }
@@ -218,41 +203,160 @@ module.exports = function (grunt) {
     // Usemin adds files to uglify
     uglify: {},
     // Usemin adds files to cssmin
+    // https://github.com/jakubpawlowicz/clean-css
     cssmin: {
-      dist: {
-        options: {
-          check: 'min'
-        }
+      options: {
+        check: 'min',
+        shorthandCompacting: false
       }
     },
-    imageoptim: {
-      options: {
-        quitAfter: true
-      },
-      distLossless: {
+    responsive_images: {
+      dist: {
         options: {
-          jpegMini: false,
-          imageAlpha: true
+          sizes: [{
+            width: 160,
+          },{
+            width: 320,
+          },{
+            width: 480,
+          },{
+            width: 640
+          },{
+            width: 800
+          },{
+            width: 960,
+          },{
+            width: 1280,
+          }]
         },
         files: [{
           expand: true,
-          cwd: '<%= yeoman.dist %>',
-          src: '**/*.{gif,png}',
-          dest: '<%= yeoman.dist %>'
-        }]
-      },
-      distLossy: {
-        options: {
-          jpegMini: true,
-          imageAlpha: false
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.dist %>',
-          src: '**/*.{jpg,jpeg}',
+          cwd: '<%= yeoman.app %>',
+          src: 'img/srcset/**/*.{gif,jpg,jpeg,png,svg}',
           dest: '<%= yeoman.dist %>'
         }]
       }
+    },
+    responsive_images_extender: {
+      options: {
+        baseDir: '<%= yeoman.dist %>',
+        ignore: ['.srcset-ignore'],
+        srcset: [{
+          suffix: '-160',
+          value: '160w'
+        },{
+          suffix: '-320',
+          value: '320w'
+        },{
+          suffix: '-480',
+          value: '480w'
+        },{
+          suffix: '-640',
+          value: '640w'
+        },{
+          suffix: '-800',
+          value: '800w'
+        },{
+          suffix: '-960',
+          value: '960w'
+        },{
+          suffix: '-1280',
+          value: '1280w'
+        }],
+        sizes: [{
+          selector: '.srcset-secondary',
+          sizeList: [{
+            cond: 'min-width: 1600px',
+            size: '320px'
+          },{
+            cond: 'min-width: 960px',
+            size: '18.8vw'
+          },{
+            cond: 'min-width: 480px',
+            size: '150px'
+          },{
+            cond: 'default',
+            size: '63vw'
+          }]
+        },{
+          selector: '.srcset-full',
+          sizeList: [{
+            cond: 'min-width: 1600px',
+            size: '960px'
+          },{
+            cond: 'min-width: 960px',
+            size: '59.22vw'
+          },{
+            cond: 'min-width: 768px',
+            size: '82.72vw'
+          },{
+            cond: 'default',
+            size: '88vw'
+          }],
+        },{
+          selector: '.srcset-half',
+          sizeList: [{
+            cond: 'min-width: 1600px',
+            size: '480px'
+          },{
+            cond: 'min-width: 960px',
+            size: '29.61vw'
+          },{
+            cond: 'min-width: 768px',
+            size: '41.36vw'
+          },{
+            cond: 'min-width: 480px',
+            size: '44vw'
+          },{
+            cond: 'default',
+            size: '88vw'
+          }],
+        },{
+          selector: '.srcset-half-to-third',
+          sizeList: [{
+            cond: 'min-width: 1600px',
+            size: '320px'
+          },{
+            cond: 'min-width: 960px',
+            size: '19.74vw'
+          },{
+            cond: 'min-width: 768px',
+            size: '27.57vw'
+          },{
+            cond: 'min-width: 480px',
+            size: '44vw'
+          },{
+            cond: 'default',
+            size: '88vw'
+          }],
+        },{
+          selector: '.srcset-third',
+          sizeList: [{
+            cond: 'min-width: 1600px',
+            size: '320px'
+          },{
+            cond: 'min-width: 960px',
+            size: '19.74vw'
+          },{
+            cond: 'min-width: 768px',
+            size: '27.57vw'
+          },{
+            cond: 'min-width: 480px',
+            size: '29.33vw'
+          },{
+            cond: 'default',
+            size: '88vw'
+          }]
+        }]
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.dist %>',
+          src: ['**/*.html', '!perf/**/*.html'],
+          dest: '<%= yeoman.dist %>'
+        }]
+      },
     },
     svgmin: {
       dist: {
@@ -305,12 +409,12 @@ module.exports = function (grunt) {
       },
       stageLoadCSS: {
         files: {
-          '<%= yeoman.app %>/_includes/loadCSS.js': '<%= yeoman.app %>/_bower_components/loadCSS/loadCSS.js'
+          '<%= yeoman.app %>/_includes/loadCSS.js': 'bower_components/loadCSS/loadCSS.js'
         }
       },
       stageOptimizedWebfontLoading: {
         files: {
-          '<%= yeoman.app %>/_includes/fontloader.js': '<%= yeoman.app %>/_bower_components/OptimizedWebfontLoading/build/fontloader.js'
+          '<%= yeoman.app %>/_includes/fontloader.js': 'bower_components/OptimizedWebfontLoading/build/fontloader.js'
         }
       }
     },
@@ -323,8 +427,7 @@ module.exports = function (grunt) {
           src: [
             '<%= yeoman.dist %>/js/**/*.js',
             '<%= yeoman.dist %>/css/styles.css',
-            '<%= yeoman.dist %>/favicon*.png',
-            '<%= yeoman.dist %>/img/**/*.{gif,jpg,jpeg,png,svg}'
+            '<%= yeoman.dist %>/favicon*.png'
           ]
         }]
       }
@@ -347,17 +450,13 @@ module.exports = function (grunt) {
       all: [
         'Gruntfile.js',
         '<%= yeoman.app %>/js/**/*.js'
-      ],
-      test: ['test/*.js']
-    },
-    casperjs: {
-      all: ['test/tests.js']
+      ]
     },
     pagespeed: {
       options: {
         locale: 'en_GB',
         nokey: true,
-        url: 'http://nigelarmstrong.me'
+        url: 'http://davidensinger.com'
       },
       desktop: {
         options: {
@@ -379,7 +478,7 @@ module.exports = function (grunt) {
             'no-externals': true,
             'timeout': 60
           },
-          url: 'http://nigelarmstrong.me/',
+          url: 'http://davidensinger.com/',
           buildUi: true
         }
       }
@@ -406,7 +505,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'concurrent:server',
-      'autoprefixer:server',
+      'postcss:server',
       'browserSync:server',
       'watch'
     ]);
@@ -421,16 +520,14 @@ module.exports = function (grunt) {
     'jshint:test',
     'clean:server',
     'concurrent:server',
-    'browserSync:server',
-    'casperjs'
+    'browserSync:server'
   ]);
 
   grunt.registerTask('check', [
-    'devUpdate',
     'clean:server',
     'jekyll:check',
     'scsslint',
-    'jshint',
+    'jshint'
   ]);
 
   grunt.registerTask('perf', [
@@ -442,11 +539,12 @@ module.exports = function (grunt) {
     'clean',
     'stage',
     'jekyll:dist',
-    'newer:imageoptim',
     'concurrent:dist',
+    'responsive_images_extender',
+    'responsive_images',
     'useminPrepare',
     'concat',
-    'autoprefixer:dist',
+    'postcss:dist',
     'csscomb',
     'cssmin',
     'uglify',
@@ -458,8 +556,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('deploy', [
-    'perf',
-    'build',
+    //'perf',
     'buildcontrol'
   ]);
 

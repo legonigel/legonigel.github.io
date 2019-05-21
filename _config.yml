@@ -8,13 +8,13 @@ title: "Nigel's Homepage"
 url: 'http://localhost:3000'
 author: 'Nigel Armstrong'
 twitter: 'legonigel'
-email: 'legonigel@gmail.com'
+email: 'nigel@nigelarmstrong.me'
 description: 'Nigel Armstrong stuff'
 
 environment: development
 
 exclude: ['img', 'js', '**.png', '**.jpg', '**.jpeg', '**.gif', '**.svg', '**.ico']
-keep_files: ['perf']
+keep_files: ['img', 'perf']
 
 # Publish posts with future date.
 # _config.build.yml sets this to false on `grunt build`
@@ -26,6 +26,8 @@ show_drafts: true
 
 category_title_prefix: ''
 category_dir: /
+
+gems: ['jekyll-paginate']
 
 permalink: /:year/:month/:title/
 paginate: 5
