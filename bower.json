@@ -1,14 +1,14 @@
 {
-  "name": "davidensinger.com",
+  "name": "nigelarmstrong.me",
   "version": "2.0.0",
-  "homepage": "https://github.com/davidensinger/davidensinger.github.io",
-  "description": "David Ensinger is a Front End Developer from Columbus, OH",
-  "author": "David Ensinger <hello@davidensinger.com>",
+  "homepage": "https://github.com/legonigel/legonigel.github.io",
+  "description": "Nigel Armstrong",
+  "author": "Nigel Armstrong <nigel@nigelarmstrong.me>",
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "loadcss": "~0.1.5",
+    "loadcss": "~0.2.4",
     "OptimizedWebfontLoading": "git://github.com/bdadam/OptimizedWebfontLoading.git",
-    "typesettings": "~2.2.0"
+    "typesettings": "~3.0.0"
   }
 }
