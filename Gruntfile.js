@@ -507,6 +507,7 @@ module.exports = function (grunt) {
       'concurrent:server',
       'postcss:server',
       'browserSync:server',
+      'penthouse',
       'watch'
     ]);
   });
