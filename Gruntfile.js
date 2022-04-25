@@ -1,5 +1,7 @@
 'use strict';
 
+const sass = require('node-sass');
+
 // Directory reference:
 //   css: css
 //   sass: _scss
@@ -93,6 +95,7 @@ module.exports = function (grunt) {
     },
     sass: {
       options: {
+        implementation: sass,
         precision: 5,
         sourceMap: false
       },
@@ -105,7 +108,7 @@ module.exports = function (grunt) {
     postcss: {
       options: {
         processors: [
-          require('autoprefixer')({browsers: 'last 2 versions, safari 6, ie 9, opera 12.1, ios 6, android 4'})
+          require('autoprefixer')({overrideBrowserslist: 'last 2 versions, safari 6, ie 9, opera 12.1, ios 6, android 4'})
         ]
       },
       dist: {
@@ -469,20 +472,6 @@ module.exports = function (grunt) {
         }
       }
     },
-    phantomas: {
-      site: {
-        options: {
-          indexPath: '<%= yeoman.dist %>/perf/phantomas/',
-          options   : {
-            'film-strip': false,
-            'no-externals': true,
-            'timeout': 60
-          },
-          url: 'http://davidensinger.com/',
-          buildUi: true
-        }
-      }
-    },
     concurrent: {
       server: [
         'sass',
@@ -532,8 +521,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('perf', [
-    'pagespeed',
-    'phantomas'
+    'pagespeed'
   ]);
 
   grunt.registerTask('build', [
